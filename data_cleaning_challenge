@@ -1,0 +1,27 @@
+# Handling missing values
+
+# Taking a look at the data
+
+# modules we'll use
+import pandas as pd
+import numpy as np
+
+# read in all our data
+nfl_data = pd.read_csv("../input/nflplaybyplay2009to2016/NFL Play by Play 2009-2017 (v4).csv")
+sf_permits = pd.read_csv("../input/building-permit-applications-data/Building_Permits.csv")
+
+# set seed for reproducibility
+np.random.seed(0) 
+
+
+
+# look at a few rows of the nfl_data file. I can see a handful of missing data already!
+nfl_data.sample(5)
+sf_permits.sample(5)
+
+# get the number of missing data points per column
+missing_values_count = nfl_data.isnull().sum()
+
+# look at the # of missing points in the first ten columns
+missing_values_count[0:10]
+
