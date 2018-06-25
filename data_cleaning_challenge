@@ -24,4 +24,3 @@ missing_values_count = nfl_data.isnull().sum()
 
 # look at the # of missing points in the first ten columns
 missing_values_count[0:10]
-
